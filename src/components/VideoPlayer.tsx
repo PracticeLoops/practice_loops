@@ -1,8 +1,10 @@
+import React from "react";
+import Webcam from "react-webcam";
+
 export const VideoPlayer: React.FunctionComponent = () => {
     return (
         <div className="VideoPlayer">
-            {/* TODO: Implement this */}
-            <p>I am a video player!</p>
+            <Webcam data-testid="test-video"/>
         </div>
     );
 }
