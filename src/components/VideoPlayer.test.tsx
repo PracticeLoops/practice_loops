@@ -9,4 +9,3 @@ describe("Webcam Test", () => {
         expect(videoPlayer).toBeInTheDocument();
     })
 })
-
