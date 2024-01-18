@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { getByRole, render, screen } from '@testing-library/react';
 import { VideoPlayer } from './VideoPlayer';
+import { act } from 'react-dom/test-utils';
 
-it('has some text', () => {
-    render(<VideoPlayer />);
-    const textElement = screen.getByText(/video player/i);
-    expect(textElement).toBeInTheDocument();
+describe("Webcam Test", () => {
+    act(() => { render(<VideoPlayer />); })
+    it('has webcam', () => {
+        const videoPlayer = screen.getByTestId("test-video");
+        expect(videoPlayer).toBeInTheDocument();
+    })
 })
